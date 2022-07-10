@@ -133,7 +133,7 @@ workflows:
       - create-deployment:
           cluster-name: capstonecluster
           requires:
-            - lint-app
+            - create-cluster
       - aws-eks/update-container-image:
           cluster-name: capstonecluster
           container-image-updates: kjcapstone=${DOCKER_USERNAME}/cloud_devops_capstone
