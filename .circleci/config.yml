@@ -136,7 +136,7 @@ workflows:
             - lint-app
       - aws-eks/update-container-image:
           cluster-name: capstonecluster
-          container-image-updates: kjcapstone=jagadeesh8877/cloud_devops_capstone
+          container-image-updates: kjcapstone=${DOCKER_USERNAME}/cloud_devops_capstone
           post-steps:
               - kubernetes/delete-resource:
                   resource-names: kjcapstone
